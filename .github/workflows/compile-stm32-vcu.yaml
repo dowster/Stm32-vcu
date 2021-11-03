@@ -10,5 +10,5 @@ jobs:
       # Use someone else's work to setup the toolchain
       # Thanks numworks! https://github.com/numworks/setup-arm-toolchain
       - uses: numworks/setup-arm-toolchain@2021-10
-      - run: make get-deps
+      - run: make get-deps -j 4
       - run: make
