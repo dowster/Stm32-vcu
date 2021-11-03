@@ -1,0 +1,14 @@
+name: compile-stm32-vcu
+on: [push]
+jobs:
+  compile-stm32-vcu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          submodules: recursive
+      # Use someone else's work to setup the toolchain
+      # Thanks numworks! https://github.com/numworks/setup-arm-toolchain
+      - uses: numworks/setup-arm-toolchain@2021-10
+      - run: make get-deps
+      - run: make
