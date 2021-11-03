@@ -12,3 +12,12 @@ jobs:
       - uses: numworks/setup-arm-toolchain@2021-10
       - run: make get-deps -j 4
       - run: make
+      # Here we upload the images because why not? Maybe some is willing
+      # to try flashing random images to their chips.
+      - uses: actions/upload-artifact@v2
+        with:
+          name: images
+          path: |
+            stm32_vcu
+            stm32_vcu.bin
+            stm32_vcu.hex
