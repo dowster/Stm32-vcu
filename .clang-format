@@ -1,0 +1,9 @@
+---
+Language: Cpp
+ReflowComments: false
+AlignEscapedNewlines: Left
+AlignConsecutiveMacros: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignOperands: Align
+
+# PackConstructorInitializers: NextLine
